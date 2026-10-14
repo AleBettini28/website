@@ -25,6 +25,8 @@
                 --fortnite-hover: #7c3aed;
                 --gamedev: #0f766e;
                 --gamedev-hover: #0d5f59;
+                --workout: #16a34a;
+                --workout-hover: #15803d;
                 --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
             }
 
@@ -84,10 +86,9 @@
             }
 
             .links {
-                display: flex;
-                flex-direction: column;
+                display: grid;
+                grid-template-columns: 1fr;
                 gap: 1rem;
-                justify-content: center;
             }
 
             .link {
@@ -146,6 +147,15 @@
                 background: var(--gamedev-hover);
             }
 
+            .link-workout {
+                background: var(--workout);
+                color: #fff;
+            }
+
+            .link-workout:hover {
+                background: var(--workout-hover);
+            }
+
             @media (min-width: 640px) {
                 h1 {
                     font-size: 2.25rem;
@@ -156,12 +166,11 @@
                 }
 
                 .links {
-                    flex-direction: row;
-                    flex-wrap: wrap;
+                    grid-template-columns: 1fr 1fr;
                 }
 
-                .link {
-                    flex: 1 1 calc(50% - 0.5rem);
+                .link-outdoor {
+                    grid-column: 1 / -1;
                 }
             }
         </style>
@@ -248,6 +257,21 @@
                             <polyline points="8 6 2 12 8 18" />
                         </svg>
                         Gamedev portfolio
+                    </a>
+                    <a class="link link-workout" href="https://workout-timer.alebettini.com/">
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            aria-hidden="true"
+                        >
+                            <circle cx="12" cy="12" r="10" />
+                            <polyline points="12 6 12 12 16 14" />
+                        </svg>
+                        Workout timer
                     </a>
                 </div>
             </div>
