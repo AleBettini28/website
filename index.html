@@ -19,6 +19,8 @@
                 --muted: #57534e;
                 --outdoor: #b45309;
                 --outdoor-hover: #92400e;
+                --climbing: #0369a1;
+                --climbing-hover: #075985;
                 --dnd: #c4b583;
                 --dnd-hover: #b3a472;
                 --fortnite: #8b5cf6;
@@ -119,6 +121,15 @@
                 background: var(--outdoor-hover);
             }
 
+            .link-climbing {
+                background: var(--climbing);
+                color: #fff;
+            }
+
+            .link-climbing:hover {
+                background: var(--climbing-hover);
+            }
+
             .link-dnd {
                 background: var(--dnd);
                 color: #1c1917;
@@ -169,7 +180,8 @@
                     grid-template-columns: 1fr 1fr;
                 }
 
-                .link-outdoor {
+                .link-outdoor,
+                .link-climbing {
                     grid-column: 1 / -1;
                 }
             }
@@ -203,7 +215,27 @@
                         >
                             <path d="m8 3 4 8 5-5 5 15H2L8 3z" />
                         </svg>
-                        Accedi ad outdoor tracker
+                        Accedi ad Outdoor Tracker
+                    </a>
+                    <a
+                        class="link link-climbing"
+                        href="https://climbing-training-manager-ui.alebettini.com/"
+                    >
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            aria-hidden="true"
+                        >
+                            <rect width="18" height="18" x="3" y="4" rx="2" />
+                            <path d="M16 2v4" />
+                            <path d="M8 2v4" />
+                            <path d="M3 10h18" />
+                        </svg>
+                        Accedi a Climbing Training Manager
                     </a>
                     <a class="link link-dnd" href="https://dnd-wiki.alebettini.com/">
                         <svg
